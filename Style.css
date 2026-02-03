@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+
+:root {
+    --ledevit-blue: #00388D; 
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--ledevit-blue);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: var(--ledevit-blue);
+    font-weight: 800; 
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--ledevit-blue);
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #333;
+    background-color: #ffffff;
+    border: 2px solid #dde1e6;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+input:focus, select:focus {
+    border-color: var(--ledevit-blue);
+    outline: none;
+}
+
+select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2300388D' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 1.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.2em 1.2em;
+    padding-right: 3rem;
+    cursor: pointer;
+}
+
+.radio-group {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 15px;
+    font-weight: 700;
+    color: var(--ledevit-blue);
+    border: 2px solid #dde1e6;
+}
+
+input[type="radio"] {
+    accent-color: var(--ledevit-blue);
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+button#buttonAgregar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--ledevit-blue);
+    background-color: white;
+    border: 2px solid var(--ledevit-blue);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+button#buttonAgregar:hover {
+    background-color: #f0f4ff;
+}
+
+button#buttonCalcular {
+    width: 100%;
+    margin-top: 20px;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    background-color: var(--ledevit-blue);
+    border: 4px solid white; 
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 56, 141, 0.4);
+    transition: all 0.3s;
+}
+button#buttonCalcular:hover {
+    transform: translateY(-2px);
+    background-color: #0044aa;
+}
+
+ul { list-style: none; padding: 0; }
+
+ul#listaProduccion li {
+    background-color: #f9fafb;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: #555;
+    border: 1px solid #eee;
+}
+
+.btn-borrar {
+    background: #ffcfcf;
+    color: #c0392b;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+ul#listaIngredientes li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 2px solid #f4f7fb;
+    line-height: 1.5;
+}
+
+ul#listaIngredientes li strong {
+    color: var(--ledevit-blue);
+    font-size: 1.1rem;
+}
+
+h3 {
+    color: var(--ledevit-blue);
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 6px solid var(--ledevit-blue);
+}
+
+.btn-alerta {
+    background: linear-gradient(135deg, #FF8C00 0%, #FF4500 100%);
+    box-shadow: 0 4px 10px rgba(255, 69, 0, 0.4);
+    color: white;
+    padding: 8px 12px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* 1. ICONOS NORMALES (Bolsa, Pallet, Prepesada) -> CHIQUITOS */
+.icono-prod {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle; 
+    margin-right: 8px; 
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+/* 2. ICONO BOLSON (Grande) */
+.icono-bolson {
+    width: 37px;
+    height: 37px;
+    vertical-align: middle; 
+    margin-right: 10px; 
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+/* 3. ICONO BALANZA (NUEVO: Tamaño especial) */
+.icono-balanza {
+    width: 58px;   /* <--- Le puse 45px para que se note bien */
+    height: 58px;
+    vertical-align: middle; 
+    margin-right: 8px; 
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+/* Efecto Hover para todos */
+li:hover .icono-prod, 
+li:hover .icono-bolson,
+li:hover .icono-balanza {
+    transform: scale(1.2); 
+}

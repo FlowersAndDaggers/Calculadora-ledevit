@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Materias Primas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>Calculadora de Producción 🏭</h1>
+
+        <div style="background: #f4f7fb; padding: 20px; border-radius: 20px; margin-bottom: 20px;">
+            <label for="selectorProducto" style="margin-top: 0;">📦 Producto a agregar:</label>
+            <select id="selectorProducto">
+                <option value="pastelera60">Pastelera 4kg - Código 60</option>
+                <option value="pasteleraFacturera">Pastelera Facturera 4kg - Código ??</option>
+            </select>
+
+            <div class="radio-group">
+                <input type="radio" id="modoBatches" name="modoCalculo" value="batches" checked>
+                <label for="modoBatches">Batches</label>
+                
+                <input type="radio" id="modoKilos" name="modoCalculo" value="kilos">
+                <label for="modoKilos">Kilos</label>
+            </div>
+
+            <label id="labelInput" for="kilosInput">Cantidad:</label>
+            <input type="number" id="kilosInput" placeholder="Ej: 1, 2, 0.5">
+
+            <button id="buttonAgregar">➕ AGREGAR A PRODUCCIÓN</button>
+        </div>
+
+        <h3 style="margin-top: 0; border: none; padding: 0;">📋 Cola de Producción:</h3>
+        <ul id="listaProduccion" style="margin-top: 10px; margin-bottom: 20px; min-height: 20px;">
+            <li style="text-align:center; color: #999; box-shadow:none; border: 2px dashed #ddd;">(Lista vacía)</li>
+        </ul>
+
+        <button id="buttonCalcular">CALCULAR TOTALES</button>
+
+        <div id="zonaResultados" style="display:none;">
+            <h3 style="border-left: 6px solid #e74c3c; color: #e74c3c;">🏁 Total Materia Prima:</h3>
+            <ul id="listaIngredientes">
+                </ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
